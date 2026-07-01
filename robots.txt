@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kinesiologie-sandra-champeau.netlify.app/sitemap.xml

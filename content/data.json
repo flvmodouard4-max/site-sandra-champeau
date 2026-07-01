@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "title": "Retrouvez votre équilibre intérieur",
+    "subtitle": "Séances personnalisées pour adultes, adolescents et enfants à Morières-lès-Avignon"
+  },
+  "about": {
+    "title": "Un parcours de vie au service du vôtre",
+    "text1": "Ancienne institutrice, j'ai découvert la kinésiologie à travers ma propre expérience personnelle. Touchée par ses bienfaits profonds, j'ai décidé de me former rigoureusement au sein de l'école EKIVIE — 633 heures de formation certifiée.",
+    "text2": "Aujourd'hui, j'accompagne adultes, adolescents et enfants vers un mieux-être durable, en douceur et sans jugement.",
+    "photo": "/sandra.webp"
+  },
+  "tarif": 60,
+  "services": [
+    { "icon": "🌿", "title": "Bien-être général",            "description": "Retrouvez une harmonie entre corps et esprit pour une meilleure qualité de vie au quotidien." },
+    { "icon": "💫", "title": "Blocages émotionnels",         "description": "Identifiez et libérez les émotions enfouies qui freinent votre épanouissement." },
+    { "icon": "🌟", "title": "Confiance en soi",             "description": "Renforcez votre estime personnelle et affirmez-vous dans toutes les sphères de votre vie." },
+    { "icon": "🧘", "title": "Gestion du stress",            "description": "Développez des ressources intérieures pour faire face aux tensions du quotidien." },
+    { "icon": "🌸", "title": "Troubles anxieux",             "description": "Réduisez l'anxiété et retrouvez un état de calme et de sécurité intérieure." },
+    { "icon": "📚", "title": "Difficultés d'apprentissage",  "description": "Accompagnez enfants et adolescents pour lever les blocages qui perturbent leurs apprentissages." }
+  ],
+  "testimonials": [
+    { "text": "Une séance vraiment apaisante. Sandra est à l'écoute et très professionnelle. Je me suis sentie libérée d'un poids que je portais depuis longtemps.", "author": "Marie L.", "stars": 5 },
+    { "text": "Grâce à Sandra, mon fils a retrouvé confiance en lui pour l'école. Les résultats ont été visibles rapidement. Je recommande vivement !", "author": "Sophie M.", "stars": 5 },
+    { "text": "Je venais pour du stress chronique. Après quelques séances, je me sens beaucoup plus serein et capable de gérer les situations difficiles.", "author": "Thomas R.", "stars": 5 }
+  ]
+}

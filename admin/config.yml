@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+locale: fr
+
+collections:
+  - name: "site"
+    label: "Contenu du site"
+    files:
+
+      - name: "general"
+        label: "📝 Textes & contenu"
+        file: "content/data.json"
+        format: json
+        fields:
+
+          - label: "Section d'accueil (Hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Titre principal", name: title, widget: string }
+              - { label: "Sous-titre",      name: subtitle, widget: text }
+
+          - label: "Section À propos"
+            name: about
+            widget: object
+            fields:
+              - { label: "Titre",       name: title,  widget: string }
+              - { label: "Paragraphe 1", name: text1, widget: text }
+              - { label: "Paragraphe 2", name: text2, widget: text }
+              - { label: "Photo de Sandra", name: photo, widget: image }
+
+          - label: "Tarif (€)"
+            name: tarif
+            widget: number
+            value_type: int
+
+          - label: "Services / Spécialités"
+            name: services
+            widget: list
+            fields:
+              - { label: "Emoji",       name: icon,        widget: string }
+              - { label: "Titre",       name: title,       widget: string }
+              - { label: "Description", name: description, widget: text }
+
+          - label: "Témoignages clients"
+            name: testimonials
+            widget: list
+            fields:
+              - { label: "Texte du témoignage", name: text,   widget: text }
+              - { label: "Prénom Nom",           name: author, widget: string }
+              - { label: "Note (1 à 5)",         name: stars,  widget: number, value_type: int, min: 1, max: 5, default: 5 }
