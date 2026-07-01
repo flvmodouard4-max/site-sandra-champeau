@@ -1,13 +1,10 @@
 backend:
-  name: github
-  repo: flvmodouard4-max/site-sandra-champeau
+  name: git-gateway
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
 
+site_url: https://kinesiologie-sandra-champeau.netlify.app
 media_folder: "images"
 public_folder: "/images"
-
 locale: fr
 
 collections:
@@ -16,7 +13,7 @@ collections:
     files:
 
       - name: "general"
-        label: "📝 Textes & contenu"
+        label: "Textes & contenu"
         file: "content/data.json"
         format: json
         fields:
@@ -28,21 +25,21 @@ collections:
               - { label: "Titre principal", name: title, widget: string }
               - { label: "Sous-titre",      name: subtitle, widget: text }
 
-          - label: "Section À propos"
+          - label: "Section A propos"
             name: about
             widget: object
             fields:
-              - { label: "Titre",       name: title,  widget: string }
-              - { label: "Paragraphe 1", name: text1, widget: text }
-              - { label: "Paragraphe 2", name: text2, widget: text }
-              - { label: "Photo de Sandra", name: photo, widget: image }
+              - { label: "Titre",            name: title,  widget: string }
+              - { label: "Paragraphe 1",     name: text1,  widget: text }
+              - { label: "Paragraphe 2",     name: text2,  widget: text }
+              - { label: "Photo de Sandra",  name: photo,  widget: image }
 
-          - label: "Tarif (€)"
+          - label: "Tarif en euros"
             name: tarif
             widget: number
             value_type: int
 
-          - label: "Services / Spécialités"
+          - label: "Services et specialites"
             name: services
             widget: list
             fields:
@@ -50,10 +47,10 @@ collections:
               - { label: "Titre",       name: title,       widget: string }
               - { label: "Description", name: description, widget: text }
 
-          - label: "Témoignages clients"
+          - label: "Temoignages clients"
             name: testimonials
             widget: list
             fields:
-              - { label: "Texte du témoignage", name: text,   widget: text }
-              - { label: "Prénom Nom",           name: author, widget: string }
-              - { label: "Note (1 à 5)",         name: stars,  widget: number, value_type: int, min: 1, max: 5, default: 5 }
+              - { label: "Texte du temoignage", name: text,   widget: text }
+              - { label: "Prenom Nom",           name: author, widget: string }
+              - { label: "Note (1 a 5)",         name: stars,  widget: number, value_type: int, min: 1, max: 5, default: 5 }
