@@ -1,3 +1,17 @@
+/* ── HERO VIDEO (chargée uniquement sur desktop pour préserver la vitesse mobile) ── */
+const heroVideo = document.getElementById('heroVideo');
+if (heroVideo && window.matchMedia('(min-width: 768px)').matches) {
+  const source = document.createElement('source');
+  source.src = 'hero-lavande.mp4';
+  source.type = 'video/mp4';
+  heroVideo.appendChild(source);
+  heroVideo.load();
+  const tryPlayHeroVideo = () => heroVideo.play().catch(() => {});
+  tryPlayHeroVideo();
+  document.addEventListener('pointerdown', tryPlayHeroVideo, { once: true });
+  document.addEventListener('scroll', tryPlayHeroVideo, { once: true, passive: true });
+}
+
 /* ── NAV SCROLL STATE ── */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -98,7 +112,7 @@ fetch('/content/data.json')
     if (tarifNum) tarifNum.textContent = data.tarif + ' €';
 
     /* Services */
-    const grid = document.getElementById('services-grid');
+    const grid = document.getElementById('bienfaits-grid');
     if (grid && data.services) {
       grid.innerHTML = data.services.map((s, i) => `
         <div class="service-card reveal" style="--i:${i}">

@@ -51,6 +51,56 @@
   }
   </script>
 
+  <!-- Schema FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qu'est-ce que la kinésiologie ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La kinésiologie est une pratique de bien-être qui utilise le test musculaire pour identifier les blocages physiques, émotionnels ou énergétiques à l'origine du stress, de l'anxiété ou d'un manque de confiance en soi, puis les libérer par des techniques douces et naturelles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelle est la différence entre kinésiologie et kinésithérapie ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ce sont deux pratiques différentes malgré la similitude des noms. La kinésithérapie est une profession médicale centrée sur la rééducation physique. La kinésiologie est une approche de bien-être non médicale qui s'intéresse aux blocages émotionnels et au stress à travers le test musculaire."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "La kinésiologie est-elle remboursée par les mutuelles ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, de nombreuses mutuelles remboursent tout ou partie des séances de kinésiologie au titre de la médecine douce. Le cabinet de Sandra Champeau à Morières-lès-Avignon est reconnu par 8 mutuelles partenaires."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de séances de kinésiologie sont nécessaires ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cela dépend de chaque personne et de la nature des blocages à traiter. Certaines personnes ressentent un mieux-être dès la première séance, tandis que d'autres bénéficient d'un suivi sur plusieurs séances espacées de quelques semaines."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "La kinésiologie convient-elle aux enfants et adolescents ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, la kinésiologie est adaptée aux enfants, adolescents et adultes. Les séances sont ajustées à l'âge et aux besoins de chacun, notamment pour le stress scolaire, la confiance en soi ou les troubles émotionnels."
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -70,9 +120,10 @@
       </button>
       <ul class="nav__links" id="navLinks">
         <li><a href="#apropos">À propos</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#bienfaits">Bien Faits</a></li>
         <li><a href="#seance">La séance</a></li>
         <li><a href="#avis">Avis</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="https://www.resalib.fr/praticien/109384-sandra-champeau-kinesiologue-morieres-les-avignon" class="nav__cta" target="_blank" rel="noopener">Prendre RDV</a></li>
       </ul>
@@ -81,7 +132,9 @@
 
   <!-- ── HERO ── -->
   <section class="hero" id="hero">
-    <div class="hero__bg"></div>
+    <div class="hero__bg">
+      <video id="heroVideo" class="hero__video" muted loop playsinline preload="none" poster="hero-poster.jpg"></video>
+    </div>
     <div class="hero__content reveal">
       <p class="hero__tag">Kinésiologue certifiée</p>
       <h1 class="hero__title" data-cms="hero.title">Retrouvez votre<br><em>équilibre intérieur</em></h1>
@@ -127,14 +180,14 @@
     </div>
   </section>
 
-  <!-- ── SERVICES ── -->
-  <section class="services section" id="services">
+  <!-- ── BIENFAITS ── -->
+  <section class="bienfaits section" id="bienfaits">
     <div class="container">
       <div class="section__header reveal">
         <span class="section__tag">Mes spécialités</span>
         <h2 class="section__title">Ce que la kinésiologie<br>peut vous apporter</h2>
       </div>
-      <div class="services__grid" id="services-grid">
+      <div class="bienfaits__grid" id="bienfaits-grid">
         <!-- Injecté via JS -->
       </div>
     </div>
@@ -208,6 +261,38 @@
     </div>
   </section>
 
+  <!-- ── FAQ ── -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Questions fréquentes</span>
+        <h2 class="section__title">Tout savoir sur la kinésiologie</h2>
+      </div>
+      <div class="faq__list reveal">
+        <details class="faq__item">
+          <summary>Qu'est-ce que la kinésiologie ?</summary>
+          <p>La kinésiologie est une pratique de bien-être qui utilise le test musculaire pour identifier les blocages physiques, émotionnels ou énergétiques à l'origine du stress, de l'anxiété ou d'un manque de confiance en soi, puis les libérer par des techniques douces et naturelles.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Quelle est la différence entre kinésiologie et kinésithérapie ?</summary>
+          <p>Ce sont deux pratiques différentes malgré la similitude des noms. La kinésithérapie est une profession médicale centrée sur la rééducation physique. La kinésiologie est une approche de bien-être non médicale qui s'intéresse aux blocages émotionnels et au stress à travers le test musculaire.</p>
+        </details>
+        <details class="faq__item">
+          <summary>La kinésiologie est-elle remboursée par les mutuelles ?</summary>
+          <p>Oui, de nombreuses mutuelles remboursent tout ou partie des séances de kinésiologie au titre de la médecine douce. Le cabinet de Sandra Champeau à Morières-lès-Avignon est reconnu par 8 mutuelles partenaires.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Combien de séances de kinésiologie sont nécessaires ?</summary>
+          <p>Cela dépend de chaque personne et de la nature des blocages à traiter. Certaines personnes ressentent un mieux-être dès la première séance, tandis que d'autres bénéficient d'un suivi sur plusieurs séances espacées de quelques semaines.</p>
+        </details>
+        <details class="faq__item">
+          <summary>La kinésiologie convient-elle aux enfants et adolescents ?</summary>
+          <p>Oui, la kinésiologie est adaptée aux enfants, adolescents et adultes. Les séances sont ajustées à l'âge et aux besoins de chacun, notamment pour le stress scolaire, la confiance en soi ou les troubles émotionnels.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- ── CONTACT ── -->
   <section class="contact section" id="contact">
     <div class="container">
@@ -271,8 +356,9 @@
         </div>
         <nav class="footer__nav">
           <a href="#apropos">À propos</a>
-          <a href="#services">Services</a>
+          <a href="#bienfaits">Bien Faits</a>
           <a href="#seance">La séance</a>
+          <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
         </nav>
         <p class="footer__legal">© 2025 Sandra Champeau · La kinésiologie est une pratique de bien-être et ne se substitue pas à un avis médical.</p>
