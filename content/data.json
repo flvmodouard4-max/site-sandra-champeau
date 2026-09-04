@@ -5,7 +5,7 @@
   },
   "about": {
     "title": "Un parcours de vie au service du vôtre",
-    "text1": "Ancienne institutrice, j'ai découvert la kinésiologie à travers ma propre expérience personnelle. Touchée par ses bienfaits profonds, j'ai décidé de me former rigoureusement au sein de l'école EKIVIE — 633 heures de formation certifiée.",
+    "text1": "Ancienne Professeur des Écoles, j'ai découvert la kinésiologie à travers ma propre expérience. Touchée par ses bienfaits profonds, j'ai décidé de me former rigoureusement au sein de l'école EKIVIE — 633 heures de formation certifiée.",
     "text2": "Aujourd'hui, j'accompagne adultes, adolescents et enfants vers un mieux-être durable, en douceur et sans jugement.",
     "photo": "/sandra.webp"
   },
@@ -19,8 +19,19 @@
     { "icon": "📚", "title": "Difficultés d'apprentissage",  "description": "Accompagnez enfants et adolescents pour lever les blocages qui perturbent leurs apprentissages." }
   ],
   "testimonials": [
-    { "text": "Une séance vraiment apaisante. Sandra est à l'écoute et très professionnelle. Je me suis sentie libérée d'un poids que je portais depuis longtemps.", "author": "Marie L.", "stars": 5 },
-    { "text": "Grâce à Sandra, mon fils a retrouvé confiance en lui pour l'école. Les résultats ont été visibles rapidement. Je recommande vivement !", "author": "Sophie M.", "stars": 5 },
-    { "text": "Je venais pour du stress chronique. Après quelques séances, je me sens beaucoup plus serein et capable de gérer les situations difficiles.", "author": "Thomas R.", "stars": 5 }
+    { "text": "Je remercie chaleureusement Sandra pour son accompagnement lors de notre première séance ensemble. Sandra est une professionnelle très compétente, bienveillante et à l'écoute. Ma problématique a été très justement identifiée et le travail réalisé pendant cette séance m'a permis de ressentir des bénéfices immédiats. Je la consulterai à nouveau les yeux fermés !", "author": "Marion A.", "stars": 5 },
+    { "text": "J'ai fait deux séances sur des thèmes différents : accepter et pardonner pour la première, et le détachement pour la seconde. Je traînais ces blessures depuis bien trop longtemps et je voulais enfin m'en libérer. Sandra a su m'aider à affronter, comprendre et avancer pour aller mieux ! Pour celles et ceux qui hésitent, je peux vous dire que cela change vraiment une vie lorsque l'on est prêt à affronter sa part d'ombre. Alors encore un grand merci à Sandra !", "author": "Lucie Picaud P.", "stars": 5 },
+    { "text": "Sandra est une professionnelle douce, à l'écoute et d'une grande bienveillance. Je ne connaissais pas cette pratique et cela a été très bénéfique pour moi et également pour mon fils que j'ai emmené consulter aussi. Merci encore à vous Sandra.", "author": "Gaelle L.", "stars": 5 },
+    { "text": "J'ai découvert la kinésiologie récemment et cette séance m'a fait énormément de bien. J'ai été accueillie avec beaucoup de douceur et d'attention. Cela m'a permis de relâcher des tensions et de mieux me recentrer. Je recommande vivement cette approche et Sandra 👍", "author": "Gaelle W.", "stars": 5 },
+    { "text": "Praticienne au top. De l'accueil à l'écoute en passant par la qualité de la séance, je me suis sentie à l'aise dès le début pour confier mes soucis, et la séance a été constructive et bénéfique. Encore merci Sandra.", "author": "Karine R.", "stars": 5 },
+    { "text": "Sandra est une professionnelle à l'écoute. Je me suis sentie à l'aise avec elle malgré la petite appréhension de ce genre de rendez-vous. Je la remercie infiniment et vous la recommande sans hésiter !", "author": "Julie A.", "stars": 5 },
+    { "text": "Praticienne très à l'écoute, séances très constructives et bénéfiques. Je la recommande fortement !", "author": "Pascal A.", "stars": 5 },
+    { "text": "Très à l'écoute. Mon fils âgé de 13 ans se sent mieux depuis ses séances.", "author": "Nora M.", "stars": 5 },
+    { "text": "J'ai apprécié ce moment, ça m'a remué mais c'était nécessaire — à réitérer. Merci.", "author": "Amandine B.", "stars": 5 },
+    { "text": "Très gentille, très humaine.", "author": "Christine H.", "stars": 5 },
+    { "text": "Très bonne séance.", "author": "Jennifer L.", "stars": 4 },
+    { "text": "Sandra a su être à l'écoute et surtout détecter elle-même les besoins de notre famille entière. Son approche est pertinente et douce.", "author": "Marion Vernhes", "stars": 5 },
+    { "text": "Très à l'écoute et très professionnelle. La séance est personnalisée en fonction de vos besoins.", "author": "Manon Bouillet", "stars": 5 },
+    { "text": "Une très belle personne, à l'écoute et bienveillante. La séance a été très bénéfique pour mon fils et moi, nous la recommandons à 100% 🙏", "author": "Angelique Picon", "stars": 5 }
   ]
 }

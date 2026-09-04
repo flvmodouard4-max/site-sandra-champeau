@@ -10,6 +10,10 @@ if (heroVideo && window.matchMedia('(min-width: 768px)').matches) {
   tryPlayHeroVideo();
   document.addEventListener('pointerdown', tryPlayHeroVideo, { once: true });
   document.addEventListener('scroll', tryPlayHeroVideo, { once: true, passive: true });
+  heroVideo.addEventListener('ended', () => {
+    heroVideo.pause();
+    heroVideo.currentTime = heroVideo.duration;
+  });
 }
 
 /* ── NAV SCROLL STATE ── */
@@ -81,71 +85,17 @@ if (badgeNum) {
   badgeNum._obs.observe(badgeNum);
 }
 
-/* ── STARS HELPER ── */
-function starsHtml(n) {
-  return '★'.repeat(Math.min(5, Math.max(1, n))) + '☆'.repeat(5 - Math.min(5, n));
-}
-
-/* ── LOAD CMS CONTENT ── */
-fetch('/content/data.json')
-  .then(r => r.json())
-  .then(data => {
-
-    /* Hero */
-    const heroTitle = document.querySelector('[data-cms="hero.title"]');
-    if (heroTitle) heroTitle.innerHTML = data.hero.title.replace(/\n/g, '<br>');
-    const heroSub = document.querySelector('[data-cms="hero.subtitle"]');
-    if (heroSub) heroSub.textContent = data.hero.subtitle;
-
-    /* About */
-    const aboutTitle = document.querySelector('[data-cms="about.title"]');
-    if (aboutTitle) aboutTitle.innerHTML = data.about.title.replace(/\n/g, '<br>');
-    const aboutT1 = document.querySelector('[data-cms="about.text1"]');
-    if (aboutT1) aboutT1.textContent = data.about.text1;
-    const aboutT2 = document.querySelector('[data-cms="about.text2"]');
-    if (aboutT2) aboutT2.textContent = data.about.text2;
-    const aboutPhoto = document.getElementById('about-photo');
-    if (aboutPhoto && data.about.photo) aboutPhoto.src = data.about.photo;
-
-    /* Tarif */
-    const tarifNum = document.getElementById('tarif-num');
-    if (tarifNum) tarifNum.textContent = data.tarif + ' €';
-
-    /* Services */
-    const grid = document.getElementById('bienfaits-grid');
-    if (grid && data.services) {
-      grid.innerHTML = data.services.map((s, i) => `
-        <div class="service-card reveal" style="--i:${i}">
-          <div class="service-card__icon">${s.icon}</div>
-          <h3>${s.title}</h3>
-          <p>${s.description}</p>
-        </div>`).join('');
-      observeReveal();
-    }
-
-    /* Témoignages */
-    const reviewsGrid = document.getElementById('reviews-grid');
-    if (reviewsGrid && data.testimonials) {
-      reviewsGrid.innerHTML = data.testimonials.map(t => `
-        <div class="review-card reveal">
-          <div class="review-card__stars">${starsHtml(t.stars)}</div>
-          <p>« ${t.text} »</p>
-          <span class="review-card__author">— ${t.author}</span>
-        </div>`).join('');
-      observeReveal();
-    }
-  })
-  .catch(() => {
-    /* Fallback silencieux si le JSON n'est pas accessible (dev local sans serveur) */
-  });
-
-/* ── NETLIFY IDENTITY REDIRECT ── */
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on('init', user => {
-    if (!user) {
-      window.netlifyIdentity.on('login', () => {
-        document.location.href = '/admin/';
-      });
-    }
-  });
+/* ── CARROUSEL AVIS ── */
+const reviewsGrid = document.getElementById('reviews-grid');
+if (reviewsGrid) {
+  const prevBtn = document.getElementById('reviewsPrev');
+  const nextBtn = document.getElementById('reviewsNext');
+  const scrollByCard = (dir) => {
+    const card = reviewsGrid.querySelector('.review-card');
+    if (!card) return;
+    const gap = parseFloat(getComputedStyle(reviewsGrid).columnGap || getComputedStyle(reviewsGrid).gap) || 24;
+    reviewsGrid.scrollBy({ left: dir * (card.offsetWidth + gap), behavior: 'smooth' });
+  };
+  prevBtn?.addEventListener('click', () => scrollByCard(-1));
+  nextBtn?.addEventListener('click', () => scrollByCard(1));
 }
