@@ -120,7 +120,7 @@ img { max-width: 100%; display: block; }
 .nav.scrolled .nav__logo { color: var(--text); }
 
 .nav__mark-img {
-  width: 44px;
+  width: 38px;
   height: auto;
   flex-shrink: 0;
 }
@@ -689,7 +689,7 @@ img { max-width: 100%; display: block; }
 
 .footer__logo {
   display: block;
-  width: 72px;
+  width: 40px;
   height: auto;
   margin: 0 auto 12px;
 }
