@@ -26,11 +26,17 @@ window.addEventListener('scroll', () => {
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('navLinks');
 burger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  burger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+  const isOpen = navLinks.classList.toggle('open');
+  burger.setAttribute('aria-expanded', isOpen);
+  document.body.classList.toggle('menu-open', isOpen);
+  nav.classList.toggle('menu-open', isOpen);
 });
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    nav.classList.remove('menu-open');
+  });
 });
 
 /* ── REVEAL ON SCROLL ── */
